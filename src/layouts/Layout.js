@@ -6,7 +6,17 @@ export default function LogoOnlyLayout() {
   return (
     <Box>
       <Bar />
-      <Outlet />
+      <Box
+        sx={{
+          flexDirection: 'column',
+          display: 'flex',
+          overflow: 'auto',
+          height: document.documentElement.clientHeight - 48,
+          mt: 5,
+        }}
+      >
+        <Outlet />
+      </Box>
     </Box>
   );
 }

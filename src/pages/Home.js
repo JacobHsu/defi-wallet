@@ -1,22 +1,24 @@
 import logo from '../logo.svg';
-import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
+import { Box, Button } from '@mui/material';
+
+const Btn = styled(Button)(({ theme }) => ({
+  width: '20vw',
+  marginTop: '10px'
+}));
 
 export default function Home() {
   return (
-    <Box>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+    <Box
+      sx={{
+        flexDirection: 'column',
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      <img src={logo} className="App-logo" alt="logo" />
+      <Btn variant="outlined">Login</Btn>
+      <Btn variant="outlined">Register</Btn>
     </Box>
   );
 }
