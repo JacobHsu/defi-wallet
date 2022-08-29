@@ -14,9 +14,7 @@ import {
 } from '@mui/material';
 
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-
-import PhoneInput from 'react-phone-input-2';
-import '../style/material.css';
+import InputPhone from 'components/InputPhone';
 
 const ToggleButtonS = styled(ToggleButton)(({ theme }) => ({
   width: '160px',
@@ -30,7 +28,6 @@ export default function Login() {
     setAlignment(newAlignment);
   };
 
-  const [phone, setPhone] = useState('');
   const [pwd, setPwd] = useState('');
 
   return (
@@ -62,15 +59,7 @@ export default function Login() {
           mt: 3,
         }}
       >
-        <PhoneInput
-          country={'us'}
-          onlyCountries={['tw', 'us']}
-          localization={{
-            Taiwan: '台灣',
-          }}
-          value={phone}
-          onChange={(phone) => setPhone(phone)}
-        />
+        <InputPhone />
         <Paper
           sx={{
             display: 'flex',

@@ -752,7 +752,7 @@
   border-radius: 5px;
   width: 395px; 
   outline: none;
-  padding: 12px 14px 12px 18px;
+  padding: 12px 14px 12px 38px;
   transition: box-shadow ease 0.25s, border-color ease 0.25s;
 }
 .react-tel-input .form-control:hover {
@@ -803,7 +803,7 @@
   position: relative;
   width: 52px;
   height: 100%;
-  padding: 0 0 0 31px;
+  padding: 0 0 0 0px;
   border-radius: 3px 0 0 3px;
 }
 .react-tel-input .selected-flag:focus .arrow {
@@ -821,7 +821,7 @@
   position: relative;
   top: 50%;
   margin-top: -1px;
-  left: 29px;
+  left: 24px;
   width: 0;
   height: 0;
   border-left: 3px solid transparent;
