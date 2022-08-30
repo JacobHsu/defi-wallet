@@ -4,6 +4,7 @@ import Layout from 'layouts/Layout';
 import Home from 'pages/Home';
 import Login from 'pages/Login';
 import Register from 'pages/Register';
+import Twofa from 'pages/2fa';
 
 export default function Router() {
   return useRoutes([
@@ -14,6 +15,7 @@ export default function Router() {
         { path: '/', element: <Home /> },
         { path: '/login', element: <Login /> },
         { path: '/register', element: <Register /> },
+        { path: '/2fa', element: <Twofa /> },
       ],
     },
     // { path: '*', element: <Navigate to="/404" replace /> },

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PhoneInput from 'react-phone-input-2';
+import { useUpdatePhone } from 'state/app/hooks'
 import '../style/material.css';
 
-const InputPhone = () => {
-
-  const [number, setNumber] = useState('');
+const InputPhone = ({ number, setNumber }) => {
+  const updatePhone = useUpdatePhone()
   return (
     <PhoneInput
       country={'us'}
@@ -15,6 +15,7 @@ const InputPhone = () => {
       value={number}
       onChange={(phone) => {
         setNumber(phone);
+        updatePhone(phone);
       }}
     />
   );

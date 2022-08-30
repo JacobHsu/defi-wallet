@@ -15,6 +15,11 @@ import {
 
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import InputPhone from 'components/InputPhone';
+import { useNavigate } from 'react-router-dom';
+
+import { PaperField } from 'theme/mui'
+
+
 
 const ToggleButtonS = styled(ToggleButton)(({ theme }) => ({
   width: '160px',
@@ -22,13 +27,15 @@ const ToggleButtonS = styled(ToggleButton)(({ theme }) => ({
 }));
 
 export default function Login() {
-  const [alignment, setAlignment] = React.useState('phone');
 
+  const [alignment, setAlignment] = React.useState('phone');
+  const navigate = useNavigate();
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
   };
 
   const [pwd, setPwd] = useState('');
+  const [number, setNumber] = useState('');
 
   return (
     <Box
@@ -59,23 +66,9 @@ export default function Login() {
           mt: 3,
         }}
       >
-        <InputPhone />
-        <Paper
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            padding: '2px 4px',
-            alignItems: 'center',
-            height: 44,
-            width: 395,
-            mt: 1,
-            border: '1px solid #cacaca',
-            boxShadow: 'none',
-            '&:hover': {
-              borderColor: '#000',
-            },
-          }}
-        >
+        <InputPhone { ...{number, setNumber}  } />
+
+        <PaperField>
           <TextField
             margin="dense"
             variant="standard"
@@ -94,7 +87,7 @@ export default function Login() {
             placeholder="password"
             onChange={(e) => setPwd(e.target.value)}
           />
-        </Paper>
+        </PaperField>
         <Grid container>
           <Grid item xs></Grid>
           <Grid item>
@@ -109,8 +102,8 @@ export default function Login() {
           fullWidth
           variant="contained"
           sx={{ mt: 3, mb: 2 }}
-          onClick={(e) => {
-            // verifyOtp(e);
+          onClick={() => {
+            navigate('/2fa');
           }}
         >
           Login
