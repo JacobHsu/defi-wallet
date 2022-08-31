@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import { Outlet } from 'react-router-dom';
 import Bar from 'components/Bar';
+import Tabs from 'components/Tabs';
 import { useLocation } from 'react-router-dom'
 
 export default function LogoOnlyLayout() {
@@ -21,6 +22,7 @@ export default function LogoOnlyLayout() {
       >
         <Outlet />
       </Box>
+      <Tabs />
     </Box>
   );
 }

@@ -7,7 +7,6 @@ import {
   InputAdornment,
   Link,
   Grid,
-  Paper,
   TextField,
   ToggleButton,
   ToggleButtonGroup,
