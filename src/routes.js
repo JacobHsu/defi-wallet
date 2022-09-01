@@ -1,4 +1,4 @@
-import { Navigate, useRoutes } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import Layout from 'layouts/Layout';
 
 import Home from 'pages/Home';
@@ -6,6 +6,7 @@ import Login from 'pages/Login';
 import Register from 'pages/Register';
 import Twofa from 'pages/2fa';
 import Nft from 'pages/nft';
+import NFTDetail from "pages/NFTDetail";
 
 export default function Router() {
   return useRoutes([
@@ -19,6 +20,7 @@ export default function Router() {
         { path: '/register', element: <Register /> },
         { path: '/2fa', element: <Twofa /> },
         { path: '/nft', element: <Nft /> },
+        { path: '/detail', element: <NFTDetail /> },
       ],
     },
     // { path: '*', element: <Navigate to="/404" replace /> },

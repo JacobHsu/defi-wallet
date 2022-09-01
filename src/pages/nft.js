@@ -1,15 +1,13 @@
-import logo from '../logo.svg';
-import { styled } from '@mui/material/styles';
-import { useNavigate } from 'react-router-dom';
-import { Box, Button } from '@mui/material';
+import { useState } from 'react';
+import { Box } from '@mui/material';
 
-const Btn = styled(Button)(({ theme }) => ({
-  width: '20vw',
-  marginTop: '10px',
-}));
+import { NFTCard } from 'components/NFTCard';
+import { goods } from '../data/goods';
+import { CardList } from 'theme/nft';
 
 export default function Home() {
-  const navigate = useNavigate();
+
+  const [products, setProducts] = useState(goods);
   return (
     <Box
       sx={{
@@ -18,23 +16,16 @@ export default function Home() {
         alignItems: 'center',
       }}
     >
-      <img src={logo} className="App-logo" alt="logo" />
-      <Btn
-        variant="outlined"
-        onClick={() => {
-          navigate('login', { replace: true });
-        }}
-      >
-        Login
-      </Btn>
-      <Btn
-        variant="outlined"
-        onClick={() => {
-          navigate('register', { replace: true });
-        }}
-      >
-        Register
-      </Btn>
+      <CardList container spacing={0}>
+        {products
+          ? products.map((item, index) => (
+              <NFTCard
+                {...{ item }}
+                key={index}
+              />
+            ))
+          : '-'}
+      </CardList>
     </Box>
   );
 }
