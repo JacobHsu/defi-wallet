@@ -10,7 +10,7 @@ import {
 export const NFTCard = ({ item }) => {
   const navigate = useNavigate();
   const { id, title, img, company, price, inCart } = item;
-  console.log(12222, img);
+
   return (
     <Card
       sx={{ maxWidth: 200, m: 1 }}
