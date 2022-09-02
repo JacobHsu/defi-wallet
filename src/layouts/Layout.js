@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import { Outlet } from 'react-router-dom';
 import Bar from 'components/Bar';
+import Menu from 'components/Menu';
 import Tabs from 'components/Tabs';
 import { useLocation } from 'react-router-dom'
 
@@ -10,7 +11,8 @@ export default function LogoOnlyLayout() {
 
   return (
     <Box>
-      {location.pathname !=='/' && <Bar />} 
+      {location.pathname !=='/' && <Bar />}
+      <Menu /> 
       <Box
         sx={{
           flexDirection: 'column',

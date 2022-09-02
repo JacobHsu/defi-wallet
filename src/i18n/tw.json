@@ -1,0 +1,21 @@
+{
+    "about": "關於",
+    "buy": "買入",
+    "create_wallt":"建立錢包",
+    "confirm":"確認",
+    "fee":"手續費",
+    "logout": "登出",
+    "login": "登入",
+    "deposit": "入金",
+    "remaining_balance":"餘額",
+    "transfer": "轉帳",
+    "transaction_history": "紀錄",
+    "withdraw": "出金",
+    "my_total_assets":"總餘額",
+    "news": "公告",
+    "language": "繁中",
+    "wallt_completed":"建立完成",
+    "transfer_amount":"金額",
+    "transfer_address":"地址"
+
+}

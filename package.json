@@ -50,6 +50,8 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^6.4.5"
+    "@craco/craco": "^6.4.5",
+    "i18next": "^21.9.1",
+    "react-i18next": "^11.18.5"
   }
 }

@@ -1,0 +1,50 @@
+
+{
+    "create_wallt":"Create Wallet",
+    "wallt_completed":"Completed",
+    "get_started":"Get Started",
+    "there_is_already_an_account":"There is already an account",
+    "wallet_activation":"Wallet Activation",
+    "email_verification":"Email verification",
+    "please_enter_your_email":"Please enter your Email",
+    "please_enter_verification_code":"Please enter six-digit verification code",
+    "login_succeeded":"Login succeeded",
+    "ok":"OK",
+
+    "wallet_restore_success":"Wallet Restore Success",
+    "wallet_activation_success":"Wallet Activation Success",
+
+    "establishing_account":"Establishing account",
+    "deposit": "Deposit",
+    "withdraw": "Withdraw",
+    "transfer": "Transfer",
+    "transaction_history": "History",
+    "logout": "Logout",
+    "login": "Login",
+    "login_telegram": "Please Login Telegram",
+    "my_total_assets":"Total",
+    "about": "About",
+    "buy": "BUY",
+    "news": "News",
+    "language": "English",
+
+    "deposit_address":"Deposit Address",
+    "deposit_history":"Deposit History",
+
+    "remaining_balance":"Remaining Balance",
+    "withdrawal_amount":"Withdrawal Amount",
+    "withdrawal_address":"Withdrawal Address",
+    "transfer_amount":"Transfer Amount",
+    "transfer_address":"Transfer Address",
+    "fee":"Fee",
+    "withdrwal_history":"Withdrwal History",
+
+    "next":"Next",
+    "confirm":"Confirm",
+    "processing":"Processing",
+    "back":"BACK",
+
+    "withdraw_to": "Withdraw To:",
+    "from": "From:",
+    "transaction_hash": "Transaction Hash"
+}

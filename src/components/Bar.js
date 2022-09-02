@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 
 import SvgIcon from '@mui/material/SvgIcon';
 import { ReactComponent as LogoSvg } from 'logo.svg';
-
+import { useSetMenuDialog } from 'state/menu/hooks';
 
 const Navbar = styled(AppBar)(({ theme }) => ({
   display: 'flex',
@@ -20,6 +20,10 @@ const Navbar = styled(AppBar)(({ theme }) => ({
 }));
 
 const Bar = () => {
+  const setMenuDialog = useSetMenuDialog();
+  const handleOpenMenu = (event) => {
+    setMenuDialog(true);
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -45,7 +49,7 @@ const Bar = () => {
               </SvgIcon>
             </Box>
 
-            <IconButton sx={{ p: 0 }}>
+            <IconButton onClick={handleOpenMenu} sx={{ p: 0 }}>
               <MenuIcon style={{ color: '#ffffff' }} />
             </IconButton>
           </Toolbar>
